@@ -1,0 +1,689 @@
+/* 
+Author: Brittany Shackelton 
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside, audio, video, var input, filter, table, tr, td, i, txtValue {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+ 
+
+
+@media screen and (min-width: 2560px), print {
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .laptop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1440px), print {
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .laptop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px), print {
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .laptop {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px), print {
+
+        .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .laptop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 425px), print {   
+    .mobile {
+        display: block;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .laptop {
+        display: none;
+    }
+}  
+    
+
+ 
+/* Style rules for body *********************************************************************** */
+
+.hd { 
+grid-area: hd; 
+}
+
+.nav { 
+grid-area: nav; 
+}
+
+.mn { 
+grid-area: mn; 
+}
+
+.ft { 
+grid-area: ft;
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: px;
+grid-template-rows: 100px/*header*/ 75px/*nav*/ 950px/*main*/ 400px/*footer*/;
+grid-template-areas: 
+'hd hd hd hd hd hd'
+'nav nav nav nav nav nav'
+'mn mn mn mn mn mn'
+'ft ft ft ft ft ft';
+gap: 5px;
+background-color: #6E8990;
+padding: 5px;
+}
+
+.grid-container > div {
+background-color: #58686C;
+padding: 3px 0;
+}
+
+
+
+
+
+/* Style rules for headers********************************************************************* */
+.grid-container > .hd {
+font-size: 20px;
+text-align: left;
+padding-left: 10px;
+}
+
+.grid-container > .hd img {
+  max-height: 80px;
+  max-width: 50px;
+}
+
+h1 {
+  font-size: 35px;
+  background-color: #242437;
+  height: 80px;
+  width: 100%;
+  padding-top: 20px;
+} 
+
+
+
+
+/* Style rules for nav ************************************************************************ */
+.grid-container > .nav {
+font-size: 20px;
+text-align: left;
+padding-left: 10px;
+background: linear-gradient(to left, #172529, #6BAFC0, #d8e3e6);
+}
+
+/* Style rules for main *********************************************************************** */
+.grid-container > .mn {
+grid: auto-flow 1fr / repeat(auto-fill, 5em);
+min-height: 100vh;
+justify-content: space-between;
+align-content: safe center;
+}
+
+/* Style rules for footer ********************************************************************* */
+.grid-container > .ft {
+font-size: 15px;
+text-align: center;
+color: #d8e3e6;
+background-color: #172529;
+height: 120px;
+position: fixed;
+left: 0%;
+bottom: 0;
+width: 100%;
+}
+
+.external-link {
+color: #6BAFC0;
+font-weight: bold;
+text-decoration: none;
+}
+
+
+
+
+
+/* hd */
+@media screen and (min-width: 2560px), print {
+    h1 {
+        font-size: 90px;
+        height: 200px;
+        padding-top: 50px;
+        padding-right: 290px;
+    }
+    
+    header img {
+        max-height: 220px;
+        max-width: 220px;
+    }
+}
+
+@media screen and (min-width: 1440px), print {
+    header img {
+        max-height: 400px;
+        max-width: 150px;
+    }
+
+    h1 {
+        font-size: 45px;
+        background-color: #242437;
+        height: 90px;
+        width: 100%;
+        padding-top: 15px;
+        padding-right: 70px;
+    } 
+}
+
+@media screen and (min-width: 1024px), print {
+    header img {
+        max-height: 100px;
+        max-width: 100px;
+    }
+
+    h1 {
+        font-size: 35px;
+        background-color: #242437;
+        height: 80px;
+        width: 100%;
+        padding-top: 17px;
+        padding-right: 70px;
+    } 
+}
+
+@media screen and (min-width: 768px), print {
+
+    header img {
+        max-height: 100px;
+        max-width: 100px;
+    }
+
+    h1 {
+        font-size: 35px;
+        background-color: #242437;
+        height: 80px;
+        width: 100%;
+        padding-top: 17px;
+        padding-right: 70px;
+    } 
+}
+
+@media screen and (min-width: 425px), print {
+
+    header img {
+        max-height: 80px;
+        max-width: 50px;
+    }
+
+    h1 {
+        font-size: 35px;
+        background-color: #242437;
+        height: 80px;
+        width: 100%;
+        padding-top: 20px;
+    } 
+}
+
+
+
+/* nav */
+@media screen and (min-width: 2560px), print {
+    
+    .nav {
+        height: 100px; 
+    }
+    
+    .nav li a {
+        font-size: 40px;
+        text-shadow: 3px 4px 3px #20A785;
+    }
+}
+
+@media screen and (min-width: 1440px), print {
+    .nav {
+        height: 70px;
+        width: 100%; 
+    }
+
+    .nav li a {
+        font-size: 25px;
+        text-shadow: 2px 3px 2px #20A785;
+        padding-right: 20px;
+        padding-left: 25px;
+    }
+
+    .nav li {
+        border-top: none;
+        display: inline-grid;
+        border-right: 2px solid #242437;
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+}
+
+@media screen and (min-width: 1024px), print {
+    .nav {
+        height: 50px;
+        width: 100%; 
+    }
+    .nav li a {
+        font-size: 20px;
+        text-shadow: 1px 2px 2px #20A785;
+        padding-right: 20px;
+        padding-left: 25px;
+    }
+    .nav li {
+        border-top: none;
+        display: inline-grid;
+        border-right: 2px solid #242437;
+        margin-top: 15px;
+        margin-bottom: 10px
+    }
+}
+
+@media screen and (min-width: 768px), print {
+
+    .nav {
+        height: 50px;
+    }
+
+    .nav li a {
+        font-size: 20px;
+        text-shadow: 2px 2px 2px #20A785;
+        padding-right: 20px;
+        padding-left: 25px;
+    }
+
+    .nav li {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+}
+
+/* table1 */ 
+@media screen and (min-width: 2560px), print {
+    
+    table.table1 {
+        margin-bottom: 50px;
+    }
+
+    table.table1 th, table.table1 td {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
+        height: 50px;
+    }
+
+    table.table1 th {
+        font-size: 40px;
+     }
+
+    table.table1 td {
+        font-size: 25px;
+        border-bottom: 15px solid #242437;
+    }
+}
+
+
+@media screen and (min-width: 1440px), print {
+    
+        table.table1 {
+        margin-bottom: 20px;
+    }
+
+    table.table1 th, table.table1 td {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 50px;
+        padding-right: 50px;
+        height: 20px;
+    }
+
+    table.table1 th {
+        font-size: 25px;
+     }
+
+    table.table1 td {
+        font-size: 15px;
+        border-bottom: 7px solid #242437;
+    }
+}
+
+@media screen and (min-width: 1024px), print {
+    table.table1 {
+        margin-bottom: 10px;
+    }
+
+    table.table1 th, table.table1 td {
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    table.table1 th {
+        font-size: 17px;
+     }
+
+    table.table1 td {
+        font-size: 12px;
+        border-bottom: 4px solid #242437;
+    }
+}   
+
+@media screen and (min-width: 768px), print {
+    table.table1 {
+        margin-bottom: 10px;
+    }
+
+    table.table1 th, table.table1 td {
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    table.table1 th {
+        font-size: 15px;
+     }
+
+    table.table1 td {
+        font-size: 12px;
+        border-bottom: 4px solid #242437;
+    }
+}   
+     
+/* table2 */ 
+@media screen and (min-width: 2560px), print {
+
+    table.table2 {
+        color: #242437;
+        border-collapse: collapse;
+        height: 700px;
+        width: 600px;
+        margin: 50px 50px 50px 50px;
+    }
+    
+    
+    table.table2 img {
+        height: 100%;
+        width: 100%
+    }
+
+    .container {
+        height: 100%;
+    }
+
+
+    .container .content {
+        text-shadow: 5px 5px #242437;
+        font-size: 60px;
+        padding: 0px;
+    }
+
+
+    table.table2 td {
+        border-bottom: 15px solid #20A785;
+        padding: 40px;
+    }
+
+    table.table2 th {
+        font-size: 45px;
+    }
+}
+
+
+@media screen and (min-width: 1440px), print {
+    
+     table.table2 {
+        color: #242437;
+        border-collapse: collapse;
+        height: 350px;
+        width: 300px;
+        margin: 20px 20px 20px 20px;
+    }
+    
+    
+    table.table2 img {
+        height: 100%;
+        width: 100%
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .container .content {
+        text-shadow: 3px 3px #242437;
+        font-size: 35px;
+        padding: 0px;
+    }
+
+
+    table.table2 td {
+        border-bottom: 8px solid #20A785;
+        padding: 20px;
+    }
+
+    table.table2 th {
+        font-size: 25px;
+    }
+}   
+    
+@media screen and (min-width: 1024px), print {
+    
+     table.table2 {
+        height: 300px;
+        width: 250px;
+        margin: 15px 15px 15px 15px;
+    }
+    
+    
+    table.table2 img {
+        height: 100%;
+        width: 100%
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .container .content {
+        text-shadow: 3px 3px 1px #242437;
+        font-size: 28px;
+        padding: 0px;
+    }
+
+
+    table.table2 td {
+        border-bottom: 5px solid #20A785;
+        padding: 10px;
+    }
+
+    table.table2 th {
+        font-size: 20px;
+    }
+} 
+
+@media screen and (min-width: 768px), print {
+    
+     table.table2 {
+        height: 350px;
+        width: 300px;
+        margin: 15px 15px 15px 15px;
+    }
+
+    table.table2 img {
+        height: 100%;
+        width: 100%
+    }
+
+    .container {
+        height: 100%;
+    }
+
+    .container .content {
+        text-shadow: 2px 2px 2px #242437;
+        font-size: 25px;
+        padding: 0px;
+    }
+
+    table.table2 td {
+        border-bottom: 3px solid #20A785;
+        padding: 8px;
+    }
+
+    table.table2 th {
+        font-size: 18px;
+    }
+}     
+
+@media screen and (min-width: 2560px), print {
+    iframe {
+        width: 150px;
+        height: 50px;
+        font-size: 43px;
+    }
+}
+
+@media screen and (min-width: 1440px), print {
+    
+        iframe {
+        width: 80px;
+        height: 30px;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 1024px), print {
+    iframe {
+        width: 60px;
+        height: 25px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 768px), print {
+    iframe {
+        width: 60px;
+        height: 20px;
+        font-size: 12px;
+    }
+}
+
+
+/* ft */
+@media screen and (min-width: 2560px), print {
+    .footer {
+        height: 220px;
+        font-size: 23px;
+    }
+}
+
+@media screen and (min-width: 1440px), print {
+    .footer {
+        height: 80px;
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (min-width: 1024px), print {
+    
+    .footer {
+        padding-top: .5px;
+        padding-bottom: .5px;
+        height: 61px;
+        width: 100%;
+        font-size: 8px;
+    }
+
+}
+@media screen and (min-width: 768px), print {
+    
+    .footer {
+        padding-top: .5px;
+        padding-bottom: .5px;
+        height: 50px;
+        width: 100%;
+        font-size: 5px;
+    }
+
+}
+
+@media screen and (min-width: 425px), print {
+    
+    .footer {
+        padding-top: .5px;
+        padding-bottom: .5px;
+        height: 20px;
+        width: 100%;
+        font-size: 3px;
+    }
+
+}

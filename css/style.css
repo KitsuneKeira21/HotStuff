@@ -1,0 +1,831 @@
+/* *KitsuneKeira* */
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside, audio, video, var input, filter, table, tr, td, i, txtValue {
+margin: 0;
+padding: 0;
+border: 0;
+}
+
+/* ***************************************************************** */
+/* Style rules for headers */
+
+@media screen and (min-width: 2560px), print {
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .laptop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1440px), print {
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+
+    .laptop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px), print {
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .laptop {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px), print {
+
+    .mobile {
+        display: none;
+    }
+
+    .tablet {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .laptop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 425px), print {   
+    .mobile {
+        display: block;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .laptop {
+        display: none;
+    }
+}  
+ 
+
+/* ************************************************************** */ 
+/*grid-row-start / grid-column-start / grid-row-end / grid-column-end.*/
+
+
+
+.hd { 
+    grid-area: hd;
+    grid-column: 1 / span 4;
+    grid-row: 1;
+}
+
+.nav { 
+    grid-area: nav;
+    grid-column: 1 / span 4;
+    grid-row: 2;
+}
+
+.webdesigntuts-workshop {
+    grid-area: nav;
+    grid-column: 3 / span 4;
+    grid-row: 2;
+}
+
+.flip-box { 
+    grid-area: flip-box;
+    grid-column: 4 / -1 ;
+    grid-row: 3;
+}
+
+.table { 
+    grid-area: fixed_header;
+    grid-column: 1 / span 4;
+    grid-row: 4;
+}
+
+.table2 { 
+    grid-area: table2;
+    grid-column: 1 / span 4;
+    grid-row: 5;
+}
+
+.ft { 
+    grid-area: ft;
+}
+
+
+.grid-container {
+    display: grid; 
+    background-image: linear-gradient(#e6e3dc 30%, #6a7885, #242437);
+    border: 10px solid #242437;
+    column-count: 4;
+}
+
+.grid-container {
+    grid-gap: none;
+}
+
+
+
+/* ***************************************************************** */
+
+.grid-container .hd {
+    display: block;
+    background-color: #242437;
+    position: sticky;
+    width: 100%;
+    height: 130px;
+}
+
+
+.grid-container .hd img {
+    float: left;
+    max-width: 150px;
+}
+
+.hd h1 {
+    text-align: center;
+    font-family: 'MessinaSerif-SemiBold';
+    color: #e6e3dc;
+    font-size: 50px;
+    width: 100%;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+
+
+
+/* ***************************************************************** */
+/* Style rule for body */
+
+body {
+    background-size: cover;
+}
+
+
+
+/* ***************************************************************** */
+/* Style rules for main content */
+
+/* ***************************************************************** */
+/* Style rules for nav area */ 
+
+.grid-container .nav {
+    background: linear-gradient(to left, #242437, #20A785, #fff5b2, #e6e3dc);
+    height: 5em;
+    width: 100%;
+}
+
+.grid-container .nav li a, dropbtn {
+    display: block;
+    color: #242437;
+    text-decoration: none;
+    font: 'MessinaSerif-Bold';
+    text-shadow: 2px 2px 1px #6ce3c6;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.grid-container .nav li {
+    border-top: none;
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.nav a:hover:not(.active) {
+    color: #e6e3dc;
+    text-shadow: 3px 3px 2px #242437;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5);
+    height: 40px;
+    width: 95px;
+}
+
+.dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: #e6e3dc;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-size: 20px;
+}
+
+.dropdown1-content a {
+      padding: 15px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+}
+
+.dropdown1-content a:hover {background-color: #e6e3dc;}
+
+.dropdown1:hover .dropdown1-content {
+    display: block;
+    border-radius: 15px;
+}
+
+
+
+/* Style rules for nav search */
+@import url(https://fonts.googleapis.com/css?family=Cabin:400);
+
+.webdesigntuts-workshop form {
+    border-radius: 5px;
+    float: right;
+    margin: 20px;
+}
+
+.webdesigntuts-workshop input {
+	background: #222;	
+	background: linear-gradient(#333, #222);	
+	border: 1px solid #444;
+	border-radius: 5px 0 0 5px;
+	box-shadow: 0 2px 0 #242437;
+	color: #6a7885;
+	float: left;
+	font-family: 'Cabin', helvetica, arial, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	height: 40px;
+	margin: 0;
+	padding: 0 10px;
+	text-shadow: 0 -1px 0 #242437;
+	width: 200px;
+}
+
+.ie .webdesigntuts-workshop input {
+	line-height: 20px;
+}
+
+.webdesigntuts-workshop input::-webkit-input-placeholder {
+   color: #6ce3c6;
+}
+
+.webdesigntuts-workshop input:-moz-placeholder {
+   color: #6ce3c6;
+}
+
+.webdesigntuts-workshop input:focus {
+	animation: glow 800ms ease-out infinite alternate;
+	background: #242437;
+	background: linear-gradient(#333933, #222922);
+	border-color: #393;
+	box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+	color: #CBFFF2;
+	outline: none;
+}
+
+.webdesigntuts-workshop input:focus::-webkit-input-placeholder { 
+	color: #CBFFF2;
+}
+
+.webdesigntuts-workshop input:focus:-moz-placeholder {
+	color: #CBFFF2;
+}
+
+.webdesigntuts-workshop button {
+	background: #242437;
+	background: linear-gradient(#333, #222);
+	box-sizing: border-box;
+	border: 1px solid #444;
+	border-left-color: #242437;
+	border-radius: 0 5px 5px 0;
+	box-shadow: 0 2px 0 #242437;
+	color: #e6e3dc;
+	display: block;
+	float: left;
+	font-family: 'Cabin', helvetica, arial, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	height: 40px;
+	line-height: 40px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	text-shadow: 0 -1px 0 #242437;
+	width: 80px;
+}	
+
+.webdesigntuts-workshop button:hover,
+.webdesigntuts-workshop button:focus {
+	background: #323635;
+	background: linear-gradient(#393939, #323635);
+	color: #CBFFF2;
+	outline: none;
+}
+
+.webdesigntuts-workshop button:active {
+	background: #323635;
+	background: linear-gradient(#393939, #323635);
+	box-shadow: 0 1px 0 #242437, inset 1px 0 1px #222;
+	top: 1px;
+}
+
+@keyframes glow {
+    0% {
+		border-color: #6ce3c6;
+		box-shadow: 0 0 5px rgba(72,255,209,.2), inset 0 0 5px rgba(72,255,209,.1), 0 2px 0 #242437;
+    }	
+    100% {
+		border-color: #CBFFF2;
+		box-shadow: 0 0 20px rgba(72,255,209,.6), inset 0 0 10px rgba(72,255,209,.4), 0 2px 0 #242437;
+    }
+}
+
+
+/* ***************************************************************** */
+/* Style rules for pcard */
+
+.full-width {
+    grid-column: 3 / -1;
+  }
+
+
+.grid-container .column {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    float: left; 
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  
+  /* Clearfix (clear floats) */
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.flip-box {
+    background-color: #6a7885;
+    width: 350px;
+    height: 450px;
+    border: 14px solid #6a7885;
+    perspective: 1000px;
+    font-family: 'Montserrat', sans-serif;
+    position: static;
+}
+
+
+  
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-shadow: 5px 5px 15px #242437;
+}
+  
+.flip-box-front {
+    background: radial-gradient(circle, #e6e3dc 65%, #c7c2b5);
+    color: #242437;
+    text-align: center;
+    font-size: 15px;
+}
+
+.flip-box-front p {
+    color: #242437;
+    text-align: left;
+    font-size: 15px;
+    padding-left: 35%;
+}
+
+
+.flip-box-back {
+    background-color: #242437;
+    color: #e6e3dc;
+    transform: rotateY(180deg);
+}
+
+.flip-box-back p {
+    text-align: left;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.flip-box-back li {
+    text-align: left;
+    font-size: 10px;
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+
+.flip-box-inner, h2 {
+      text-align: center;
+      font-size: 20px;
+}
+
+
+
+/* ***************************************************************** */
+/* Style rules for table1 stat bar */
+
+.wrapper {
+    width: 100%;
+    min-height: 700px;
+    position: absolute;
+    top: 50px;
+    display: block;
+}
+
+.progress-wrapper {
+    width: 200px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.progress {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateX(-8deg) rotateY(-10deg);
+    background-color: rgba(255,255,255,0.3);
+    font-size: 20px;
+    text-align: right;
+    color: #242437;
+}
+
+.side {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.7);
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.bottom {
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+    box-shadow: 10px 15px 15px rgba(106,120,133,0.7),
+        inset 14px 8px 10px rgba(106,120,133,0.5);
+}
+
+.top {
+    transform: translate(0, -100%) rotateX(90deg);
+    transform-origin: bottom;
+    box-shadow: 3px 5px 3px rgba(106,120,133,0.3),
+        inset 5px 3px 5px rgba(106,120,133,0.5);
+}
+
+.back {
+    transform: translateZ(-20px);
+    box-shadow: 10px 4px 15px rgba(106,120,133,0.5),
+        inset 10px 30px 10px rgba(106,120,133,0.5);
+}
+
+.left {
+    width: 20px;
+    transform: rotateY(90deg);
+    transform-origin: left;
+    box-shadow: 1px 1px 8px rgba(106,120,133,0.1),
+        inset 10px 10px 1px rgba(106,120,133,0.5);
+}
+
+.bar1 {
+    height: 100%;
+    background-color: rgba(32,167,133,0.8);
+    box-shadow: 3px 2px 15px rgba(106,120,133,0.5),
+        inset 5px 5px 30px rgba(106,120,133,0.3);
+    animation: width 3000ms ease-in-out forwards;
+    width: 70%;
+}
+
+
+.bar2 {
+    height: 100%;
+    background-color: rgba(199,79,38,0.8);
+    box-shadow: 3px 2px 15px rgba(106,120,133,0.5),
+        inset 5px 5px 30px rgba(106,120,133,0.3);
+    animation: width 3000ms ease-in-out forwards;
+    width: 30%;
+}
+
+.bar3 {
+    height: 100%;
+    background-color: rgba(242,194,46,0.8);
+    box-shadow: 3px 2px 15px rgba(106,120,133,0.5),
+        inset 5px 5px 30px rgba(106,120,133,0.3);
+    animation: width 3000ms ease-in-out forwards;
+    width: 50%;
+}
+
+
+@keyframes width {
+    from { width: 0%; }
+}
+
+
+/* ***************************************************************** */
+/* Style rules for table1 */
+
+.grid-container .table {
+    width: 100%;
+    height: 400px;
+    overflow-y: scroll;
+    margin-left: 0%;
+    text-align: center;
+    color: #e6e3dc;
+    background-color: #242437;
+    position: relative;
+}
+
+.table td {
+    font-size: 18px;
+    height: 40px;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.table th {
+    font-size: 25px;
+    padding-bottom: 40px;
+    padding-top: 30px;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid #e6e3dc;
+    position: relative;
+}
+
+
+
+
+/* ***************************************************************** */
+/* Style rules for table 2 */
+.grid-container table.table2 {
+    color: #242437;
+    border-collapse: collapse;
+    margin: 10px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+table.table2 tr {
+    text-align: center;
+}
+
+
+.container2 {
+    position: relative;
+    margin: 1px 1px 1px 1px;
+}
+
+
+.container2 .content2 {
+    position: absolute;
+    top: 0;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.7);
+    color: #E89945;
+    text-shadow: 5px 5px 1px #242437;
+    font-family: 'MessinaSerif-SemiBold';
+    font-size: 23px;
+    width: 100%;
+    padding: 1px;
+}
+
+
+table.table2 td {
+    color: #e6e3dc;
+    font-size: 15px;
+    background-color: #242437;
+    border-bottom: 4px solid #20A785;
+    table-layout: fixed;
+    padding: 5px; 
+}
+
+
+table.table2 th {
+    font-size: 18px;
+    color: #e6e3dc;
+    background-color: #242437;
+    padding-bottom: 10px;
+}
+
+
+
+/* ***************************************************************** */
+/* Style rules for iframe */
+
+
+
+/* ************************************************************** */
+/* Laptop Viewport: Style rule for 3D Box */ 
+/*
+.grid-container cube {
+    
+}
+
+:root {
+    --size: 150px;
+    --n-size: calc(var(--size) * -1);
+    --half: calc(var(--size)/2);
+    --n-half: calc(var(--half) * -1);
+    --rot: 90deg;
+    --n-rot: calc(var(--rot) * -1);
+}
+
+.cube {
+    width: 20vw;
+    height: 20vw;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: ;
+    transform: rotateY(-45deg) rotateX(-45deg);
+    transition: 1s;
+}
+
+.space:hover>.cube {
+    transform: rotateY(360deg) rotateX(-30deg);
+}
+
+.side {
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    width: calc(var(--size) + 50px);
+    height: calc(var(--size) + 50px);
+    background-color: rgb(52, 52, 52);
+    transition: 0.2s;
+    cursor: pointer;
+    border: 1em solid rgb(0, 0, 0);
+    box-shadow: 0 0 50px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 1em;
+}
+
+.side:hover {
+    width: calc(var(--size) + 10px);
+    height: calc(var(--size) + 10px);
+}
+
+.s1 {
+    background-color: rgba(238, 130, 238, 0.459);
+    transform: translateZ(var(--half));
+}
+
+.s2 {
+    background-color: rgba(168, 92, 168, 0.575);
+    transform: translateZ(var(--n-half));
+}
+
+.s3 {
+    background-color: violet;
+    transform: translateX(var(--half)) rotateY(var(--rot));
+}
+
+.s4 {
+    background-color: violet;
+    transform: translateX(var(--n-half)) rotateY(var(--n-rot));
+}
+
+.s5 {
+    background-color: rgba(238, 209, 130, 0.76);
+    transform: translateY(var(--half)) rotateX(var(--rot));
+}
+
+.s6 {
+    background-color: rgba(247, 231, 88, 0.541);
+    transform: translateY(var(--n-half)) rotateX(var(--n-rot));
+}
+
+.cube:hover>.s1 {
+    background-color: rgba(153, 205, 50, 0.637);
+    transform: translateZ(var(--size));
+}
+
+.cube:hover>.s2 {
+    transform: translateZ(var(--n-size));
+}
+
+.cube:hover>.s3 {
+    transform: translateX(var(--size)) rotateY(var(--rot));
+}
+
+.cube:hover>.s4 {
+    transform: translateX(var(--n-size)) rotateY(var(--n-rot));
+}
+
+.cube:hover>.s5 {
+    transform: translateY(var(--size)) rotateX(var(--rot));
+}
+
+.cube:hover>.s6 {
+    transform: translateY(var(--n-size)) rotateX(var(--n-rot));
+}
+
+.content {
+    font-size: 1.2rem;
+    color: white;
+    display: none;
+    transition: 0.2s;
+}
+
+.content:hover {
+    font-size: 2rem;
+}
+
+.cube:hover>.content {
+    display: block;
+}
+
+.title {
+    font-size: 3rem;
+    color: white;
+}
+*/
+/* ************************************************************** */
+/* Laptop Viewport: Style rule for footer */ 
+
+
+.grid-container .ft {
+    font-size: 10px;
+    font: 'MessinaSerif-SemiBold';
+    text-align: center;
+    color: #e6e3dc;
+    background-color: #242437;
+    height: 70px;
+    position: fixed;
+    left: 0%;
+    bottom: 0;
+    width: 100%;
+}
+
+.ft .external-link {
+  color: #20A785;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+
+
+/* ***************************************************************** */
+/* Media Query for Print */
+@media print {
+
+    body {
+        background-color: #e6e3dc;
+        color: #242437;
+    }
+}
